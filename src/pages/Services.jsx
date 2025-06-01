@@ -23,6 +23,8 @@ import Footballeuse from "../assets/images/personnages/la_footballeuse.png";
 import ReineDeGlace from "../assets/images/personnages/la_reine_des_glaces.png";
 import ApprentieSorciere from "../assets/images/personnages/l_apprentie_sorciere.png";
 
+import DevisForm from "../components/Devis_form";
+
 import OurUniverse from "../components/Our_Universe";
 
 const Services = () => {
@@ -192,45 +194,85 @@ const Services = () => {
         {/* Character Carousel Component */}
         <CharactersCarousel characters={characters} />
       </div>
-      
+
       {/* Quelques Image */}
-      <div className="flex flex-col items-center justify-center space-y-10 px-50"></div>
+      <div className="flex flex-col items-center justify-center space-y-10 px-50 py-20">
         <h1 className="text-5xl p-10 font-bold font-komila-axis text-center text-[#C99F17]">
           Quelques images de Dodge Rôles
         </h1>
         <p className="px-10 leading-10 text-center">
-          Laissez-vous inspirer par quelques-unes de nos réalisations : des décorations raffinées, des ambiances uniques, et des instants magiques immortalisés.
+          Laissez-vous inspirer par quelques-unes de nos réalisations : des
+          décorations raffinées, des ambiances uniques, et des instants magiques
+          immortalisés.
         </p>
-        <div className="grid grid-cols-4 grid-rows-3 gap-4 w-400 h-300 px-10">  
-                    
-                <div className="col-span-1 row-span-2">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-1 row-span-1">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-1 row-span-1">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-1 row-span-1">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-1 row-span-1">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-2 row-span-2">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div className="col-span-2 row-span-1">
-                    <img src={DodgeRoles} alt="Hero" className="w-full h-full object-cover rounded-lg" />
-                </div>
-        
+        <div className="grid grid-cols-4 grid-rows-3 gap-4 w-400 h-300 px-10">
+          <div className="col-span-1 row-span-2">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-2 row-span-2">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="col-span-2 row-span-1">
+            <img
+              src={DodgeRoles}
+              alt="Hero"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
         </div>
+      </div>
 
       {/* <OurUniverse /> */}
 
+      <div className="flex flex-col items-center justify-center space-y-10 px-50 py-20">
+        <h1 className="text-5xl p-10 font-bold font-komila-axis text-center text-[#C99F17]">
+          Votre devis sur mesure !
+        </h1>
+        <p className="px-10 leading-10 text-center">
+          Nos activités s’adaptent à vos besoins : événements privés,
+          team-building, écoles ou centres de loisirs… <br />
+          Demandez un devis personnalisé en quelques clics et découvrez nos
+          offres adaptées à votre groupe.
+        </p>
+        <DevisForm />
       </div>
-
+    </div>
   );
 };
 export default Services;
