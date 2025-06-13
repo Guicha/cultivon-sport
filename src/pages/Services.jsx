@@ -25,7 +25,7 @@ import ApprentieSorciere from "../assets/images/personnages/l_apprentie_sorciere
 
 import DevisForm from "../components/Devis_form";
 
-import OurUniverse from "../components/Our_Universe";
+import ImageCarousel from "../components/ImageCarousel";
 
 const Services = () => {
   // Character data with links
@@ -257,6 +257,10 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      <ImageCarousel></ImageCarousel>
+
+
 
       {/* <OurUniverse /> */}
 
