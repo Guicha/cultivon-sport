@@ -203,7 +203,7 @@ const Services = () => {
 
       {/* <OurUniverse /> */}
 
-      <div className="flex flex-col items-center justify-center space-y-10 px-4 md:px-8 lg:px-16 xl:px-20 py-20 max-w-7xl mx-auto">
+      <div className="flex flex-col items-center justify-center space-y-10 px-4 md:px-8 lg:px-16 xl:px-20 py-20 mx-auto">
         <h1 className="text-5xl p-10 font-bold font-komila-axis text-center text-[#C99F17]">
           Votre devis sur mesure !
         </h1>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "./Image";
 
@@ -20,6 +20,27 @@ const CharactersCarousel = ({ characters }) => {
     currentPage * charactersPerPage,
     (currentPage + 1) * charactersPerPage
   );
+  
+  // Preload all images
+  useEffect(() => {
+    characters.forEach(character => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = character.image;
+      document.head.appendChild(link);
+    });
+    // Optional: cleanup if needed
+    return () => {
+      // Remove only the links we added
+      const links = document.querySelectorAll('link[rel="preload"][as="image"]');
+      links.forEach(link => {
+        if (characters.some(c => c.image === link.href)) {
+          document.head.removeChild(link);
+        }
+      });
+    };
+  }, [characters]);
   
   return (
     <div className="w-full">

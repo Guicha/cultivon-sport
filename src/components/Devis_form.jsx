@@ -12,6 +12,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false); // add loading state
 
   const activites = [
     "Dodge Rôles",
@@ -66,30 +67,52 @@ const ContactForm = () => {
     return newErrors;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const newErrors = validateForm();
 
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid, submit the data
-      console.log("Formulaire soumis:", formData);
-      alert("Formulaire envoyé avec succès!");
+      setIsSubmitting(true);
+      try {
+        // Simulate sending
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Reset form
-      setFormData({
-        nom: "",
-        email: "",
-        telephone: "",
-        activite: "",
-        nombreParticipants: "",
-        message: "",
-      });
+        // const subject = encodeURIComponent(`Demande de devis - ${formData.activite}`);
+        // const body = encodeURIComponent(`
+        // Nom: ${formData.nom}
+        // Email: ${formData.email}
+        // Téléphone: ${formData.telephone || "Non fourni"}
+        // Activité: ${formData.activite}
+        // Nombre de participants: ${formData.nombreParticipants}
+        // Message: ${formData.message || "Aucun message fourni"}
+        // `);
+
+        // // Create and open mailto link
+        // const mailtoLink = `mailto:contact@cultivonsport.fr?subject=${subject}&body=${body}`;
+        // window.open(mailtoLink, '_blank');
+        console.log("Formulaire soumis:", formData);
+        alert("Formulaire envoyé avec succès!");
+
+        // Reset form
+        setFormData({
+          nom: "",
+          email: "",
+          telephone: "",
+          activite: "",
+          nombreParticipants: "",
+          message: "",
+        });
+      } catch (error) {
+        alert("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+      } finally {
+        setIsSubmitting(false);
+      }
     } else {
       setErrors(newErrors);
     }
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-8xl mx-auto p-10">
       <div className="bg-white rounded-lg shadow-lg w-full flex flex-col lg:flex-row overflow-hidden">
         {/* Image de gauche */}
         <img
@@ -269,9 +292,17 @@ const ContactForm = () => {
             <button
               type="button"
               onClick={handleSubmit}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300 ease-in-out hover:scale-105 text-sm sm:text-base"
+              disabled={isSubmitting}
+              className="flex items-center px-8 py-3 bg-[#C99F17] hover:bg-[#B8901A] text-white font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full sm:w-auto text-sm sm:text-base"
             >
-              Envoyer le formulaire
+              {isSubmitting ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                  Envoi en cours...
+                </>
+              ) : (
+                <>Envoyer le formulaire</>
+              )}
             </button>
           </div>
         </div>
