@@ -129,7 +129,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="activity-page bg-[#2C2C3A]">
+    <div className="activity-page bg-[#2C2C3A] w-full overflow-x-hidden">
       <Hero
         image={Fond}
         title="Des activités sportives qui stimulent le corps et l’esprit"
@@ -139,11 +139,11 @@ const Services = () => {
             Esprit d’équipe, stratégie et amusement garantis !"
       />
 
-      <div className="service px-50 py-20">
+      <div className="service px-4 md:px-8 lg:px-16 xl:px-20 py-20 max-w-7xl mx-auto">
         <h1 className="text-5xl pt-10 font-bold font-komila-axis text-center text-[#C99F17]">
           Nos services
         </h1>
-        <div className="flex flex-row items-center justify-between mt-8 space-x-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between mt-8 space-y-4 lg:space-y-0 lg:space-x-4">
           <div className="flex flex-col items-center justify-center mt-8 font-poppins">
             <Image
               src={DodgeRoles}
@@ -181,7 +181,7 @@ const Services = () => {
         <ActivitiesCarousel />
       </div>
       {/* Nos personnages */}
-      <div className="space-y-20 px-50 py-20 flex flex-col items-center justify-center">
+      <div className="space-y-20 px-4 md:px-8 lg:px-16 xl:px-20 py-20 flex flex-col items-center justify-center max-w-7xl mx-auto">
         <h1 className="text-5xl pt-10 font-bold font-komila-axis text-center text-[#C99F17]">
           Nos personnages
         </h1>
@@ -195,68 +195,7 @@ const Services = () => {
         <CharactersCarousel characters={characters} />
       </div>
 
-      {/* Quelques Image */}
-      <div className="flex flex-col items-center justify-center space-y-10 px-50 py-20">
-        <h1 className="text-5xl p-10 font-bold font-komila-axis text-center text-[#C99F17]">
-          Quelques images de Dodge Rôles
-        </h1>
-        <p className="px-10 leading-10 text-center">
-          Laissez-vous inspirer par quelques-unes de nos réalisations : des
-          décorations raffinées, des ambiances uniques, et des instants magiques
-          immortalisés.
-        </p>
-        <div className="grid grid-cols-4 grid-rows-3 gap-4 w-400 h-300 px-10">
-          <div className="col-span-1 row-span-2">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-1 row-span-1">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-1 row-span-1">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-1 row-span-1">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-1 row-span-1">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-2 row-span-2">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="col-span-2 row-span-1">
-            <img
-              src={DodgeRoles}
-              alt="Hero"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </div>
+      
 
       <ImageCarousel></ImageCarousel>
 
@@ -264,7 +203,7 @@ const Services = () => {
 
       {/* <OurUniverse /> */}
 
-      <div className="flex flex-col items-center justify-center space-y-10 px-50 py-20">
+      <div className="flex flex-col items-center justify-center space-y-10 px-4 md:px-8 lg:px-16 xl:px-20 py-20 max-w-7xl mx-auto">
         <h1 className="text-5xl p-10 font-bold font-komila-axis text-center text-[#C99F17]">
           Votre devis sur mesure !
         </h1>

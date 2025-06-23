@@ -84,51 +84,71 @@ const Avis = () => {
     return stars;
   };
   return (
-      <div
-        className="relative w-full flex items-center justify-center rounded-lg overflow-hidden"
-        style={{
-          backgroundImage: `url(${Fond})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "420px", // ajuste la hauteur selon tes besoins
-        }}
-      >
-        {/* Carte d'avis */}
-        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg w-3/5 mr-8 z-10">
-          <p className="text-gray-700 leading-relaxed mb-4">
-            {testimonials[currentIndex].text}
-          </p>
-          <div className="flex items-center">
-            <div>
-              <p className="font-medium text-gray-900">
-                {testimonials[currentIndex].author}
-              </p>
-              <p className="text-sm text-gray-500">
-                {testimonials[currentIndex].date}
-              </p>
-            </div>
-            <div className="ml-auto">
-              {renderStars(testimonials[currentIndex].rating)}
-            </div>
+    <div
+      className="relative w-full flex items-center justify-center rounded-lg overflow-hidden"
+      style={{
+        backgroundImage: `url(${Fond})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "300px",
+      }}
+    >
+      {/* Mobile: Card takes full width with padding */}
+      <div className="block sm:hidden absolute inset-4 bg-white p-4 rounded-lg shadow-lg z-10">
+        <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+          {testimonials[currentIndex].text}
+        </p>
+        <div className="flex flex-col space-y-2">
+          <div>
+            <p className="font-medium text-gray-900 text-sm">
+              {testimonials[currentIndex].author}
+            </p>
+            <p className="text-xs text-gray-500">
+              {testimonials[currentIndex].date}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            {renderStars(testimonials[currentIndex].rating)}
           </div>
         </div>
+      </div>
 
-        {/* Boutons de navigation */}
-        <div className="absolute bottom-6 left-8 flex space-x-2 z-20">
-          <button
-            onClick={goToPrevious}
-            className="bg-white rounded-full p-2 shadow-md hover:bg-gray-300 transition-colors"
-          >
-            <ChevronLeft size={20} color="#2C2C3A"/>
-          </button>
-          <button
-            onClick={goToNext}
-            className="bg-white rounded-full p-2 shadow-md hover:bg-gray-300 transition-colors"
-          >
-            <ChevronRight size={20} color="#2C2C3A" />
-          </button>
+      {/* Desktop: Original layout */}
+      <div className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg w-3/5 mr-8 z-10">
+        <p className="text-gray-700 leading-relaxed mb-4">
+          {testimonials[currentIndex].text}
+        </p>
+        <div className="flex items-center">
+          <div>
+            <p className="font-medium text-gray-900">
+              {testimonials[currentIndex].author}
+            </p>
+            <p className="text-sm text-gray-500">
+              {testimonials[currentIndex].date}
+            </p>
+          </div>
+          <div className="ml-auto">
+            {renderStars(testimonials[currentIndex].rating)}
+          </div>
         </div>
       </div>
+
+      {/* Navigation buttons */}
+      <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-8 flex space-x-2 z-20">
+        <button
+          onClick={goToPrevious}
+          className="bg-white rounded-full p-2 shadow-md hover:bg-gray-300 transition-colors"
+        >
+          <ChevronLeft size={16} className="sm:w-5 sm:h-5" color="#2C2C3A"/>
+        </button>
+        <button
+          onClick={goToNext}
+          className="bg-white rounded-full p-2 shadow-md hover:bg-gray-300 transition-colors"
+        >
+          <ChevronRight size={16} className="sm:w-5 sm:h-5" color="#2C2C3A" />
+        </button>
+      </div>
+    </div>
   );
 };
 export default Avis;

@@ -103,7 +103,7 @@ const ContactForm = () => {
         <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#C99F17] to-[#E6B429] p-8 lg:p-12 text-white flex flex-col justify-center">
           <div className="space-y-6">
             <div>
-              <h2 className="text-3xl lg:text-3xl font-bold font-komila-axis mb-4">
+              <h2 className="text-4xl lg:text-4xl font-bold font-poppins mb-4">
                 Besoin d’informations ? <br />
                 Échangeons ensemble !
               </h2>
@@ -116,7 +116,7 @@ const ContactForm = () => {
               </p>
             </div>
             
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MessageCircle className="w-6 h-6 mt-1 flex-shrink-0" />
                 <div>
@@ -149,16 +149,16 @@ const ContactForm = () => {
               <p className="text-sm opacity-80 mt-1">
                 🔒 Vos données sont protégées et sécurisées
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Right side - Form */}
         <div className="w-full lg:w-1/2 p-8 space-y-6">
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-2">Envoyez-nous un message</h3>
             <p className="text-gray-600">Remplissez le formulaire et nous vous répondrons rapidement</p>
-          </div>
+          </div> */}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -222,7 +222,7 @@ const ContactForm = () => {
               </div>
 
               {/* Sujet */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label htmlFor="sujet" className="flex items-center text-sm font-medium text-gray-700">
                   <MessageCircle className="w-4 h-4 mr-2 text-[#C99F17]" />
                   Sujet <span className="text-red-500 ml-1">*</span>
@@ -244,7 +244,7 @@ const ContactForm = () => {
                   ))}
                 </select>
                 {errors.sujet && <p className="text-red-500 text-sm">{errors.sujet}</p>}
-              </div>
+              </div> */}
             </div>
 
             {/* Message */}
