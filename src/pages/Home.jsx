@@ -1,5 +1,6 @@
 /* filepath: d:\Prestation Jeece\cultivon'sport\src\pages\Home.jsx */
 import Hero from "../components/Hero";
+import Fond from "../assets/images/hero.png";
 import ActivitySection from "../components/Activity_section";
 import OurUniverse from "../components/Our_Universe";
 import Avis from "../components/Avis";
@@ -11,6 +12,7 @@ const HomePage = () => {
             <Hero 
                 title="Bienvenue chez Cultivon'sport"
                 subtitle="Chez Cultivon'sport, nous créons des activités ludiques et sportives pour tout public. Toutes nos activités son innovantes et allient capacités mentales et capacités physiques. La réflexion au cœur de l'action"
+                image={Fond}
             />
             <ActivitySection />
             <OurUniverse />

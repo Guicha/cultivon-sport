@@ -3,7 +3,7 @@ import Fond from "../assets/images/hero3.png";
 
 import PaulGerard from "../assets/images/PaulGerard.png";
 
-import Engagement from "../components/engagement";
+import Engagement from "../components/Engagement";
 
 const About = () => {
     return (
