@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Dodgesroles from "../assets/images/carrousel/dodgeroles.png";
+import Dodgesroles from "../assets/images/carrousel/dodgeroles.jpg";
 import Memory from '../assets/images/carrousel/memory.png';
 import Revisport from '../assets/images/carrousel/revisport.png';
 
@@ -30,7 +30,7 @@ const Carousel = () => {
       image: Dodgesroles
     },
     {
-      title: "MEMORY GÉANT",
+      title: "Memory's cube",
       description: "Nos Événements sportifs sont idéaux pour renforcer l'esprit d'équipe et promouvoir le bien-être au sein de votre groupe. En combinant des activités physiques et cognitives, nous créons des expériences mémorables et engageantes qui encouragent la participation et l'interaction.",
       benefits: [
         { icon: "⭐", text: "Expériences uniques" },

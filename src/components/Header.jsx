@@ -34,7 +34,7 @@ const Header = () => {
 
             {/* Mobile Navigation */}
             <nav className={`md:hidden bg-gray/90 rounded-xl backdrop-blur-sm transition-all duration-300 ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                <div className="container mx-auto py-4 space-y-4">
+                <div className="container mx-auto p-4 space-y-4">
                     <Link to="/" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
                     <Link to="/services" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Nos Services</Link>
                     <Link to="/about" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Qui sommes nous ?</Link>

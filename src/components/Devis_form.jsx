@@ -17,8 +17,7 @@ const ContactForm = () => {
   const activites = [
     "Dodge Rôles",
     "Révi'sport",
-    "Memory géant",
-    "Team Building",
+    "Memory's cube",
     "Autre",
   ];
 
@@ -144,7 +143,7 @@ const ContactForm = () => {
                   name="nom"
                   value={formData.nom}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
+                  className={`w-full text-black px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
                     errors.nom ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Votre nom"
@@ -167,7 +166,7 @@ const ContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
+                  className={`w-full text-black px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="votre@email.com"
@@ -191,7 +190,7 @@ const ContactForm = () => {
                 name="telephone"
                 value={formData.telephone}
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base"
+                className="w-full text-black px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base"
                 placeholder="Votre numéro de téléphone"
               />
             </div>
@@ -216,7 +215,7 @@ const ContactForm = () => {
                   name="activite"
                   value={formData.activite}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
+                  className={`w-full text-black px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
                     errors.activite ? "border-red-500" : "border-gray-300"
                   }`}
                 >
@@ -246,7 +245,7 @@ const ContactForm = () => {
                   value={formData.nombreParticipants}
                   onChange={handleChange}
                   min="1"
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
+                  className={`w-full text-black px-3 sm:px-4 py-2 sm:py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 text-sm sm:text-base ${
                     errors.nombreParticipants
                       ? "border-red-500"
                       : "border-gray-300"
@@ -281,7 +280,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 resize-vertical text-sm sm:text-base"
+                className="w-full text-black px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50 resize-vertical text-sm sm:text-base"
                 placeholder="Décrivez votre projet, vos attentes, la date souhaitée..."
               />
             </div>

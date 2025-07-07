@@ -52,8 +52,8 @@ const CharactersCarousel = ({ characters }) => {
               <Image
                 src={character.image}
                 alt={character.alt}
-                width={400}
-                height={200}
+                width={300}
+                height={300}
                 className="transition-transform duration-300 hover:scale-105"
               />
             </a>

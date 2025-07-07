@@ -14,15 +14,15 @@ const Footer = () => {
                 <div className="flex flex-col items-center sm:items-end justify-center text-center order-1 sm:order-2">
                     <p className="text-xs sm:text-sm">© 2024-2025 Cultivon'sport</p>
                     <div className="flex space-x-3 sm:space-x-4 mt-2"> 
-                        <div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-red-600 transition duration-300 ease-in-out">
+                        <a href="https://youtube.com/@cultivonsport"><div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-red-600 transition duration-300 ease-in-out">
                             <FaYoutube className="text-xs sm:text-sm" />
-                        </div>
-                        <div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-black transition duration-300 ease-in-out">
+                        </div></a>
+                        <a href="https://www.tiktok.com/@cultivonsport"><div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-black transition duration-300 ease-in-out">
                             <FaTiktok className="text-xs sm:text-sm" />
-                        </div>
-                        <div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-[linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)] transition duration-300 ease-in-out">
+                        </div></a>
+                        <a href="https://www.instagram.com/cultivonsport/#"><div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-[linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)] transition duration-300 ease-in-out">
                             <FaInstagram className="text-xs sm:text-sm" />
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 /* filepath: d:\Prestation Jeece\cultivon'sport\src\pages\Home.jsx */
 import Hero from "../components/Hero";
-import Fond from "../assets/images/hero.png";
+import Fond from "../assets/images/video.gif";
 import ActivitySection from "../components/Activity_section";
 import OurUniverse from "../components/Our_Universe";
 import Avis from "../components/Avis";
@@ -31,7 +31,7 @@ const HomePage = () => {
             </div>
 
             {/* FAQ */}
-            <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 py-12 sm:py-16 lg:py-20 max-w-7xl mx-auto">
+            <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20   py-12 sm:py-16 lg:py-20 max-w-7xl mx-auto">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl pt-6 sm:pt-10 font-bold font-komila-axis text-center text-[#C99F17] px-4">
                     LA FAQ
                 </h1>

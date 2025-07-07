@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Fond from "../assets/images/hero3.png";
+import Fond from "../assets/images/video.gif";
 
 import PaulGerard from "../assets/images/PaulGerard.png";
 

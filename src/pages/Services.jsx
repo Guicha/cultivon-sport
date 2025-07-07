@@ -2,26 +2,26 @@ import Hero from "../components/Hero";
 import Fond from "../assets/images/hero2.png";
 import Image from "../components/Image";
 import ActivitiesCarousel from "../components/carrousel";
-import DodgeRoles from "../assets/images/dodge_roles.png";
+import DodgeRoles from "../assets/images/dodge.jpg";
 import ReviSport from "../assets/images/revi_sport.png";
 import Memory from "../assets/images/memory.png";
 import CharactersCarousel from "../components/CharactersCarousel";
-import Boxer from "../assets/images/personnages/le_boxeur.png";
-import Lion from "../assets/images/personnages/le_lion.png";
-import Corbeau from "../assets/images/personnages/le_corbeau.png";
-import JoueurPeps from "../assets/images/personnages/le_peps_joueur.png";
-import Tigre from "../assets/images/personnages/le_tigre.png";
-import Traitre from "../assets/images/personnages/le_traitre.png";
-import Voleur from "../assets/images/personnages/le_voleur.png";
-import Jumeaux from "../assets/images/personnages/les_jumeaux.png";
-import Invincible from "../assets/images/personnages/l_invincible.png";
-import SorciereImmorale from "../assets/images/personnages/la_sorcière_immorale.png";
-import Sorciere from "../assets/images/personnages/la_sorcière.png";
-import Boomerang from "../assets/images/personnages/le_boomerang.png";
-import Bombe from "../assets/images/personnages/la_bombe.png";
-import Footballeuse from "../assets/images/personnages/la_footballeuse.png";
-import ReineDeGlace from "../assets/images/personnages/la_reine_des_glaces.png";
-import ApprentieSorciere from "../assets/images/personnages/l_apprentie_sorciere.png";
+import Boxer from "../assets/images/personnages/le_boxeur.jpg";
+import Lion from "../assets/images/personnages/le_lion.jpg";
+import Corbeau from "../assets/images/personnages/le_corbeau.jpg";
+import JoueurPeps from "../assets/images/personnages/le_peps_joueur.jpg";
+import Tigre from "../assets/images/personnages/le_tigre.jpg";
+import Traitre from "../assets/images/personnages/le_traitre.jpg";
+import Voleur from "../assets/images/personnages/le_voleur.jpg";
+import Jumeaux from "../assets/images/personnages/les_jumeaux.jpg";
+import Invincible from "../assets/images/personnages/l_invincible.jpg";
+import SorciereImmorale from "../assets/images/personnages/la_sorcière_immorale.jpg";
+import Sorciere from "../assets/images/personnages/la_sorcière.jpg";
+import Boomerang from "../assets/images/personnages/le_boomerang.jpg";
+import Bombe from "../assets/images/personnages/la_bombe.jpg";
+import Footballeuse from "../assets/images/personnages/la_footballeuse.jpg";
+import ReineDeGlace from "../assets/images/personnages/la_reine_des_glaces.jpg";
+import ApprentieSorciere from "../assets/images/personnages/l_apprentie_sorciere.jpg";
 
 import DevisForm from "../components/Devis_form";
 
@@ -144,12 +144,12 @@ const Services = () => {
           Nos services
         </h1>
         <div className="flex flex-col lg:flex-row items-center justify-between mt-8 space-y-4 lg:space-y-0 lg:space-x-4">
-          <div className="flex flex-col items-center justify-center mt-8 font-poppins">
+          <div className="flex flex-col items-center justify-center mt-8 font-poppins pr-4">
             <Image
               src={DodgeRoles}
               alt="Dodges Roles"
-              width={400}
-              height={200}
+              width={300}
+              height={300}
             ></Image>
             <h3 className="p-2">
               Et si on testait la balle au prisonnier 3.0 !
@@ -159,7 +159,7 @@ const Services = () => {
             <Image
               src={ReviSport}
               alt="Révi'sport"
-              width={400}
+              width={300}
               height={200}
             ></Image>
             <h3 className="p-2">
@@ -169,8 +169,8 @@ const Services = () => {
           <div className="flex flex-col flex-wrap items-center justify-center mt-8 font-poppins">
             <Image
               src={Memory}
-              alt="Memory géant"
-              width={400}
+              alt="Memory's cube"
+              width={300}
               height={200}
             ></Image>
             <h3 className="p-2">

@@ -2,8 +2,8 @@ import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Map = () => {
-  const address = "12 Rue des Sportifs, 75015 Paris, Île-de-France";
-  const phone = "01 23 45 67 89";
+  const address = "Ile de France";
+  const phone = "06 82 92 76 68";
   const email = "contact@cultivonsport.fr";
 
   return (
@@ -25,7 +25,7 @@ const Map = () => {
                 <MapPin className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-white mb-1">Adresse</h3>
+                <h3 className="font-semibold text-white mb-1">Région</h3>
                 <p className="text-gray-300">{address}</p>
               </div>
             </div>

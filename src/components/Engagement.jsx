@@ -1,6 +1,6 @@
-import Image1 from "../assets/images/engagement/image1.png";
-import Image2 from "../assets/images/engagement/image2.png";
-import Image3 from "../assets/images/engagement/image3.png";
+import Image1 from "../assets/images/engagement/image1.jpg";
+import Image2 from "../assets/images/engagement/image2.jpg";
+import Image3 from "../assets/images/engagement/image3.jpg";
 import BackImage from "../assets/images/backimage.png";
 
 
@@ -9,21 +9,21 @@ const Engagement = () => {
     {
       id: 1,
       title: "Le sport comme levier de bien-être",
-      text: "Convaincus que le sport est un formidable levier pour le bien-être, la santé et l'apprentissage, nous développons des activités innovantes, notamment movement, réflexion et acquisition de connaissances avec des univers inspirants comme le manga et la culture geek.",
+      text: "Convaincus que le sport est un formidable levier pour le bien-être, la santé et l’apprentissage, nous développons des activités innovantes, mêlant mouvement, réflexion et acquisition de connaissances dans des univers inspirants comme le manga et la culture geek.",
       image: Image1,
       imagePosition: "left"
     },
     {
       id: 2,
       title: "Accessibilité et dynamisme",
-      text: "Notre ambition est de rendre la pratique sportive accessible, dynamique et engageante en repoussant les limites du jeu et de l'apprentissage. Nous créons des expériences qui favorisent l'immersion, l'inclusion, la stratégie et l'exploration physique tout en stimulant la curiosité et la réflexion.",
+      text: "Notre ambition est de rendre la pratique sportive accessible, dynamique et engageante, en repoussant les limites du jeu et de l’apprentissage. Nous créons des expériences qui favorisent l’immersion, l’inclusion, la stratégie et l’exploration physique, tout en stimulant la curiosité et la réflexion.",
       image: Image2,
       imagePosition: "right"
     },
     {
       id: 3,
       title: "Innovation et projets futurs",
-      text: "En 2024, nous avons lancé notre premier projet, le Dodge Notes, une expérience unique où sport, stratégie et immersion narrative s'entremêlent pour proposer un jeu captivant et évolutif. Forts de cet élan, nous travaillons déjà sur de nouvelles activités qui verront le jour en 2025-2026, toujours dans cette logique d'innovation et de dépassement de soi.",
+      text: "En 2024, nous avons lancé notre premier projet : le Dodge Rôles, une expérience unique où sport, stratégie et immersion narrative s’entremêlent pour proposer un jeu captivant et évolutif. Forts de cet élan, nous travaillons déjà sur deux nouvelles activités qui verront le jour en 2025-2026, toujours dans cette logique d’innovation et de dépassement de soi.",
       image: Image3,
       imagePosition: "left"
     }
