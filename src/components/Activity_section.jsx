@@ -21,9 +21,9 @@ const ActivitySection = () => {
       </div>
 
       <div className='flex flex-col lg:flex-row mt-8 sm:mt-12 space-y-6 lg:space-y-0 lg:space-x-8'>
-        <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold lg:pr-8'>Découvrez nos activités</h3>
+        <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold lg:pr-8 text-white'>Découvrez nos activités</h3>
         <div className='flex flex-col items-center lg:items-end justify-start lg:justify-end flex-1'>
-          <p className='text-left lg:text-right leading-relaxed'>Bougez, réfléchissez, progressez ! Nos activités innovantes mêlent stratégie, action et plaisir. Venez découvrir Dodge Rôles, Révi'Sport et bien d'autres expériences uniques.</p>
+          <p className='text-left lg:text-right leading-relaxed text-white'>Bougez, réfléchissez, progressez ! Nos activités innovantes mêlent stratégie, action et plaisir. Venez découvrir Dodge Rôles, Révi'Sport et bien d'autres expériences uniques.</p>
           <button 
             className="mt-4 sm:my-6 px-4 sm:px-5 py-2 sm:py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-300 ease-in-out hover:scale-105 text-sm sm:text-base" 
             onClick={handleContactClick}
