@@ -8,9 +8,9 @@ const Header = () => {
     return (
         <header className="absolute top-0 left-0 w-full z-50 text-white p-4">
             <div className="container mx-auto flex items-center justify-between max-w-7xl">
-                <a href="/">
+                <Link to="/">
                     <img src={logoImage} alt="Logo" className="h-10 w-10 sm:h-12 sm:w-12" loading="lazy" />
-                </a>
+                </Link>
                 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-6">

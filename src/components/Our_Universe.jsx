@@ -12,7 +12,7 @@ const OurUniverse = () => {
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-komila-axis text-center text-[#C99F17]">
         PLONGEZ DANS NOTRE UNIVERS
       </h1>
-      <p className="leading-6 sm:leading-7 lg:leading-8 text-center text-sm sm:text-base lg:text-lg max-w-4xl">
+      <p className="leading-6 sm:leading-7 lg:leading-8 text-center text-sm sm:text-base lg:text-lg max-w-4xl text-white">
         Découvrez en images l'univers de Cultivon'sport ! Nos activités allient
         mouvement, réflexion et plaisir, accessibles à tous, que vous soyez
         enfant, adulte ou en quête d'un team-building original. Plongez dans

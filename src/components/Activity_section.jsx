@@ -3,12 +3,14 @@ import DodgeRoles from '../assets/images/dodge_roles.png';
 import ReviSport from '../assets/images/revi_sport.png';
 import Memory from '../assets/images/memory.png';
 import Image from './Image';
-import { Link } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ActivitySection = () => {
+  const navigate = useNavigate();
+  
   const handleContactClick = () => {
-    // Redirect to the contact page and focus on the contact form
-    Link('/contact#contact-form');
+    // Navigate to the contact page using React Router
+    navigate('/contact');
   };
 
   return (
