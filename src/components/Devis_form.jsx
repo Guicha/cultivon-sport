@@ -11,7 +11,7 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useStpate({});
   const [isSubmitting, setIsSubmitting] = useState(false); // add loading state
 
   const activites = [

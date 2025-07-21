@@ -15,7 +15,7 @@ const ActivitySection = () => {
       <h1 className="text-3xl sm:text-4xl md:text-5xl pt-6 sm:pt-10 font-bold font-komila-axis text-center text-[#C99F17] px-4">NOS ACTIVITÉS</h1>
       
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 place-items-center'>
-        <Image src={DodgeRoles} alt="Dodges Roles" width={300} height={300}></Image>
+        <Image src={DodgeRoles} alt="Dodges Rôles" width={300} height={300}></Image>
         <Image src={ReviSport} alt="Révi'sport" width={300} height={300}></Image>
         <Image src={Memory} alt="Memory géant" width={300} height={300}></Image>
       </div>

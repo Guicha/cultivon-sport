@@ -147,7 +147,7 @@ const Services = () => {
           <div className="flex flex-col items-center justify-center mt-8 font-poppins pr-4">
             <Image
               src={DodgeRoles}
-              alt="Dodges Roles"
+              alt="Dodges Rôles"
               width={300}
               height={300}
             ></Image>
