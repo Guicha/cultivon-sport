@@ -22,7 +22,7 @@ const HomePage = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl pt-6 sm:pt-10 font-bold font-komila-axis text-center text-[#C99F17] px-4">
                     LES AVIS DE NOS CLIENTS
                 </h1>
-                <p className="px-4 sm:px-6 lg:px-10 leading-7 sm:leading-8 lg:leading-10 text-center text-sm sm:text-base lg:text-lg">
+                <p className="px-4 sm:px-6 lg:px-10 leading-7 sm:leading-8 lg:leading-10 text-center text-sm sm:text-base lg:text-lg text-white">
                     Nos participants partagent leur expérience avec Cultivon'sport. <br className="hidden sm:block" />
                     Découvrez ce qu'ils pensent de nos activités et de leur impact sur le
                     bien-être et l'apprentissage.
@@ -35,7 +35,7 @@ const HomePage = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl pt-6 sm:pt-10 font-bold font-komila-axis text-center text-[#C99F17] px-4">
                     LA FAQ
                 </h1>
-                <h2 className="text-lg sm:text-xl pt-6 sm:pt-10 font-bold py-3 sm:py-5">
+                <h2 className="text-lg sm:text-xl pt-6 sm:pt-10 font-bold py-3 sm:py-5 text-white">
                     Besoin d'aide?
                 </h2>
                 <Accordeon />

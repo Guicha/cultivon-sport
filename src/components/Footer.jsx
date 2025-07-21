@@ -12,7 +12,7 @@ const Footer = () => {
                     <img src={Logo} alt="logo" className="h-10 w-16 sm:h-14 sm:w-24 mx-auto sm:mx-0" loading="lazy"/>
                 </div>
                 <div className="flex flex-col items-center sm:items-end justify-center text-center order-1 sm:order-2">
-                    <p className="text-xs sm:text-sm">© 2024-2025 Cultivon'sport</p>
+                    <p className="text-xs sm:text-sm text-white">© 2024-2025 Cultivon'sport</p>
                     <div className="flex space-x-3 sm:space-x-4 mt-2"> 
                         <a href="https://youtube.com/@cultivonsport" target="_blank"><div className="youtube-icon flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full text-white border-white border-2 hover:bg-red-600 transition duration-300 ease-in-out">
                             <FaYoutube className="text-xs sm:text-sm" />

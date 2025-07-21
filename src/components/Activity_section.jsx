@@ -3,11 +3,12 @@ import DodgeRoles from '../assets/images/dodge_roles.png';
 import ReviSport from '../assets/images/revi_sport.png';
 import Memory from '../assets/images/memory.png';
 import Image from './Image';
+import { Link } from 'lucide-react';
 
 const ActivitySection = () => {
   const handleContactClick = () => {
     // Redirect to the contact page and focus on the contact form
-    window.location.href = '/contact#contact';
+    Link('/contact#contact-form');
   };
 
   return (
