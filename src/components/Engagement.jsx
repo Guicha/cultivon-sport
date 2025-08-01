@@ -46,7 +46,7 @@ const Engagement = () => {
                 <img 
                   src={BackImage}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover shadow-lg transform -rotate-3"
+                  className="absolute inset-0 w-full h-full object-cover transform -rotate-3"
                   loading="lazy"
                 />
                 <div className="relative w-64 h-64 rounded-full overflow-hidden scale-70">

@@ -72,10 +72,28 @@ const ContactForm = () => {
       setIsSubmitting(true);
       
       try {
-        // Simulation d'envoi
+        // Option 1: EmailJS
+        // Installer: npm install @emailjs/browser
+        // import emailjs from '@emailjs/browser';
+        // 
+        // await emailjs.send(
+        //   'YOUR_SERVICE_ID',
+        //   'YOUR_TEMPLATE_ID',
+        //   {
+        //     from_name: formData.nom,
+        //     from_email: formData.email,
+        //     phone: formData.telephone,
+        //     subject: formData.sujet,
+        //     message: formData.message,
+        //     to_email: 'votre@email.com'
+        //   },
+        //   'YOUR_PUBLIC_KEY'
+        // );
+
+        // Simulation temporaire - REMPLACER PAR UNE VRAIE SOLUTION
         await new Promise(resolve => setTimeout(resolve, 1000));
         
-        console.log('Message envoyé:', formData);
+        console.log('Message à envoyer:', formData);
         alert('Message envoyé avec succès! Nous vous répondrons dans les plus brefs délais.');
         
         // Reset form
@@ -87,6 +105,7 @@ const ContactForm = () => {
           message: ''
         });
       } catch (error) {
+        console.error('Erreur:', error);
         alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
       } finally {
         setIsSubmitting(false);
