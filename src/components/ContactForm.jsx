@@ -1,39 +1,42 @@
 import React, { useState } from 'react';
 import { Send, User, Mail, Phone, MessageCircle } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactForm = () => {
+  const [state, handleFormspreeSubmit] = useForm("xdkdyojw");
   const [formData, setFormData] = useState({
     nom: '',
     email: '',
     telephone: '',
-    sujet: '',
     message: ''
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sujets = [
-    'Demande d\'information',
-    'Réservation d\'activité',
-    'Partenariat',
-    'Team building entreprise',
-    'Événement privé',
-    'Autre'
-  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
+    // Map form field names to state field names
+    const fieldMapping = {
+      'name': 'nom',
+      'phone': 'telephone',
+      'email': 'email',
+      'message': 'message'
+    };
+    
+    const stateFieldName = fieldMapping[name] || name;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [stateFieldName]: value
     }));
     
     // Clear error when user starts typing
-    if (errors[name]) {
+    if (errors[stateFieldName]) {
       setErrors(prev => ({
         ...prev,
-        [name]: ''
+        [stateFieldName]: ''
       }));
     }
   };
@@ -51,9 +54,6 @@ const ContactForm = () => {
       newErrors.email = 'L\'adresse email n\'est pas valide';
     }
     
-    if (!formData.sujet) {
-      newErrors.sujet = 'Veuillez sélectionner un sujet';
-    }
     
     if (!formData.message.trim()) {
       newErrors.message = 'Le message est requis';
@@ -69,51 +69,31 @@ const ContactForm = () => {
     const newErrors = validateForm();
     
     if (Object.keys(newErrors).length === 0) {
-      setIsSubmitting(true);
-      
-      try {
-        // Option 1: EmailJS
-        // Installer: npm install @emailjs/browser
-        // import emailjs from '@emailjs/browser';
-        // 
-        // await emailjs.send(
-        //   'YOUR_SERVICE_ID',
-        //   'YOUR_TEMPLATE_ID',
-        //   {
-        //     from_name: formData.nom,
-        //     from_email: formData.email,
-        //     phone: formData.telephone,
-        //     subject: formData.sujet,
-        //     message: formData.message,
-        //     to_email: 'votre@email.com'
-        //   },
-        //   'YOUR_PUBLIC_KEY'
-        // );
-
-        // Simulation temporaire - REMPLACER PAR UNE VRAIE SOLUTION
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        console.log('Message à envoyer:', formData);
-        alert('Message envoyé avec succès! Nous vous répondrons dans les plus brefs délais.');
-        
-        // Reset form
-        setFormData({
-          nom: '',
-          email: '',
-          telephone: '',
-          sujet: '',
-          message: ''
-        });
-      } catch (error) {
-        console.error('Erreur:', error);
-        alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
-      } finally {
-        setIsSubmitting(false);
-      }
+      // Submit to Formspree
+      await handleFormspreeSubmit(e);
     } else {
       setErrors(newErrors);
     }
   };
+
+  // Show success message if form was submitted successfully
+  if (state.succeeded) {
+    return (
+      <div className="w-full max-w-6xl mx-auto py-12">
+        <div className="bg-white rounded-lg shadow-xl p-8 text-center">
+          <div className="text-green-600 text-6xl mb-4">✓</div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Message envoyé avec succès!</h2>
+          <p className="text-gray-600 mb-6">Nous vous répondrons dans les plus brefs délais.</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-6 py-3 bg-[#C99F17] hover:bg-[#B8901A] text-white font-medium rounded-md transition-all duration-300"
+          >
+            Envoyer un autre message
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-6xl mx-auto py-12">
@@ -190,13 +170,19 @@ const ContactForm = () => {
                 <input
                   type="text"
                   id="nom"
-                  name="nom"
+                  name="name"
                   value={formData.nom}
                   onChange={handleChange}
                   className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C99F17] bg-gray-50 text-gray-900 ${
                     errors.nom ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Votre nom et prénom"
+                />
+                <ValidationError 
+                  prefix="Name" 
+                  field="name"
+                  errors={state.errors}
+                  className="text-red-500 text-sm"
                 />
                 {errors.nom && <p className="text-red-500 text-sm">{errors.nom}</p>}
               </div>
@@ -218,6 +204,12 @@ const ContactForm = () => {
                   }`}
                   placeholder="votre@email.com"
                 />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-500 text-sm"
+                />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
             </div>
@@ -232,38 +224,20 @@ const ContactForm = () => {
                 <input
                   type="tel"
                   id="telephone"
-                  name="telephone"
+                  name="phone"
                   value={formData.telephone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C99F17] bg-gray-50 text-gray-900"
                   placeholder="01 23 45 67 89"
                 />
+                <ValidationError 
+                  prefix="Phone" 
+                  field="phone"
+                  errors={state.errors}
+                  className="text-red-500 text-sm"
+                />
               </div>
 
-              {/* Sujet */}
-              {/* <div className="space-y-2">
-                <label htmlFor="sujet" className="flex items-center text-sm font-medium text-gray-700">
-                  <MessageCircle className="w-4 h-4 mr-2 text-[#C99F17]" />
-                  Sujet <span className="text-red-500 ml-1">*</span>
-                </label>
-                <select
-                  id="sujet"
-                  name="sujet"
-                  value={formData.sujet}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C99F17] bg-gray-50 text-gray-900 ${
-                    errors.sujet ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                >
-                  <option value="">Sélectionnez un sujet</option>
-                  {sujets.map((sujet, index) => (
-                    <option key={index} value={sujet}>
-                      {sujet}
-                    </option>
-                  ))}
-                </select>
-                {errors.sujet && <p className="text-red-500 text-sm">{errors.sujet}</p>}
-              </div> */}
             </div>
 
             {/* Message */}
@@ -283,6 +257,12 @@ const ContactForm = () => {
                 }`}
                 placeholder="Décrivez votre demande, vos questions ou votre projet..."
               />
+              <ValidationError 
+                prefix="Message" 
+                field="message"
+                errors={state.errors}
+                className="text-red-500 text-sm"
+              />
               {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
               <p className="text-sm text-gray-500">
                 Minimum 10 caractères - {formData.message.length}/500
@@ -293,10 +273,10 @@ const ContactForm = () => {
             <div className="flex justify-end pt-4">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={state.submitting}
                 className="flex items-center px-8 py-3 bg-[#C99F17] hover:bg-[#B8901A] text-white font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                {isSubmitting ? (
+                {state.submitting ? (
                   <>
                     <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                     Envoi en cours...
@@ -308,6 +288,11 @@ const ContactForm = () => {
                   </>
                 )}
               </button>
+              <ValidationError 
+                prefix="Form" 
+                errors={state.errors}
+                className="text-red-500 text-sm mt-2"
+              />
             </div>
           </form>
         </div>

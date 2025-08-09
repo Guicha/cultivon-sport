@@ -136,8 +136,8 @@ const DodgesRoles = () => {
         <div className="space-y-16">
           {/* Description section */}
           <div className="text-center space-y-8">
-            <h2 className="text-4xl font-bold font-komila-axis text-[#C99F17]">
-              La rencontre explosive entre balle au prisonnier et jeu de rôles
+            <h2 className="text-4xl/15 font-bold font-komila-axis text-[#C99F17]">
+              Qu'est-ce que le Dodge Rôles ?
             </h2>
             <p className="text-lg leading-8 max-w-4xl mx-auto">
               Le Dodge Rôles, c'est la rencontre explosive entre la balle au prisonnier et le jeu de rôles ! 
@@ -156,21 +156,21 @@ const DodgesRoles = () => {
           {/* Image gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="space-y-4">
-              <Image src={DodgeRoles1} alt="Stratégie en action" width={300} height={200} />
+              <Image src={DodgeRoles4} alt="Stratégie en action" width={300} height={200} />
             </div>
             <div className="space-y-4">
-              <Image src={DodgeRoles2} alt="Travail d'équipe" width={300} height={200} />
+              <Image src={DodgeRoles1} alt="Travail d'équipe" width={300} height={200} />
             </div>
             <div className="space-y-4">
               <Image src={DodgeRoles3} alt="Agilité et réflexes" width={300} height={200} />
             </div>
             <div className="space-y-4">
-              <Image src={DodgeRoles4} alt="Moments de victoire" width={300} height={200} />
+              <Image src={DodgeRoles2} alt="Moments de victoire" width={300} height={200} />
             </div>
           </div>
 
           {/* Features section */}
-          <div className="bg-gray-800/50 rounded-lg p-8">
+          {/* <div className="bg-gray-800/50 rounded-lg p-8">
             <h3 className="text-3xl font-bold font-komila-axis text-[#C99F17] mb-8 text-center">
               Le Dodge Rôles offre une introduction ludique et éducative
             </h3>
@@ -230,10 +230,10 @@ const DodgesRoles = () => {
                 <p>Chaque rôle possède des capacités uniques</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* How to play section */}
-          <div className="space-y-8">
+          {/* <div className="space-y-8">
             <h3 className="text-3xl font-bold font-komila-axis text-[#C99F17] text-center">
               Comment jouer au Dodge Rôles ?
             </h3>
@@ -267,7 +267,7 @@ const DodgesRoles = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Characters section */}
           <div className="space-y-20 px-4 md:px-8 lg:px-16 xl:px-20 py-20 flex flex-col items-center justify-center max-w-7xl mx-auto">

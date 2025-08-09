@@ -1,9 +1,7 @@
 import Hero from "../components/Hero";
 import MemoryBg from "../assets/images/memory.png";
 import Memory1 from "../assets/images/memory1.jpg";
-import Memory2 from "../assets/images/memory2.jpg";
-import Memory3 from "../assets/images/memory3.jpg";
-import Memory4 from "../assets/images/memory4.jpg";
+import Memory2 from "../assets/images/memory3.jpg";
 import Image from "../components/Image";
 
 const MemorysCube = () => {
@@ -35,22 +33,13 @@ const MemorysCube = () => {
           </div>
 
           {/* Image gallery */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="space-y-4">
-              <Image src={Memory1} alt="Memory's cube matériel 1" width={300} height={200} />
-              <p className="text-center text-sm">Les cubes Memory's</p>
-            </div>
-            <div className="space-y-4">
-              <Image src={Memory2} alt="Memory's cube matériel 2" width={300} height={200} />
-              <p className="text-center text-sm">Matériel de jeu</p>
-            </div>
-            <div className="space-y-4">
-              <Image src={Memory3} alt="Memory's cube matériel 3" width={300} height={200} />
-              <p className="text-center text-sm">Différentes faces</p>
-            </div>
-            <div className="space-y-4">
-              <Image src={Memory4} alt="Memory's cube matériel 4" width={300} height={200} />
-              <p className="text-center text-sm">Thèmes variés</p>
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-[#C99F17] text-center">Le jeu en images</h3>
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                <Image src={Memory1} alt=" " width={400} height={300} />
+                <Image src={Memory2} alt=" " width={400} height={300} />
+              </div>
             </div>
           </div>
 

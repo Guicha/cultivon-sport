@@ -32,28 +32,28 @@ const Header = () => {
                             <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-50">
                                 <Link 
                                     to="/dodges-roles" 
-                                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                                    className="block px-4 py-2 hover:bg-gray-700 hover:rounded-md transition-colors"
                                     onClick={() => setIsActivitiesOpen(false)}
                                 >
                                     Dodges Rôles
                                 </Link>
                                 <Link 
                                     to="/revis-sport" 
-                                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                                    className="block px-4 py-2 hover:bg-gray-700 hover:rounded-md transition-colors"
                                     onClick={() => setIsActivitiesOpen(false)}
                                 >
                                     Révi'sport
                                 </Link>
                                 <Link 
                                     to="/memorys-cube" 
-                                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                                    className="block px-4 py-2 hover:bg-gray-700 hover:rounded-md transition-colors"
                                     onClick={() => setIsActivitiesOpen(false)}
                                 >
                                     Memory's cube
                                 </Link>
                                 <Link 
                                     to="/big-pen" 
-                                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                                    className="block px-4 py-2 hover:bg-gray-700 hover:rounded-md transition-colors"
                                     onClick={() => setIsActivitiesOpen(false)}
                                 >
                                     Big Pen
