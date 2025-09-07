@@ -128,7 +128,7 @@ const DodgesRoles = () => {
     <div className="dodges-roles-page bg-[#2C2C3A] w-full overflow-x-hidden">
       <Hero
         image={DodgeRolesBg}
-        title="Dodges Rôles"
+        title="Dodge Rôles"
         subtitle="Et si on testait la balle au prisonnier 3.0 !"
       />
 

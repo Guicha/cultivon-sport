@@ -25,7 +25,7 @@ const MemorysCube = () => {
             </p>
             <p className="text-lg leading-8 max-w-4xl mx-auto">
               Deux équipes s'affrontent en relais pour retrouver le plus vite possible les bonnes paires cachées sur les différentes faces du cube.
-              Avec plusieurs niveaux de difficulté et des thèmes variés (animaux, sports, objets…), l'activité s'adapte facilement à tous les âges.
+              Avec plusieurs niveaux de difficulté et des thèmes variés (animaux, sports, personnages ou symboles...), l'activité s'adapte facilement à tous les âges.
             </p>
             <p className="text-lg leading-8 max-w-4xl mx-auto font-semibold text-[#C99F17]">
               Ludique, dynamique et idéal pour les écoles, centres ou événements, le Memory's Cube fait rimer apprentissage, mouvement et esprit d'équipe.
@@ -54,7 +54,7 @@ const MemorysCube = () => {
                   <span className="text-2xl">🎲</span>
                 </div>
                 <h4 className="text-xl font-bold">Memory Géant</h4>
-                <p>Version XXL du jeu classique pour une expérience immersive</p>
+                <p>Version XXL du jeu classique pour une expérience immersive en 3D</p>
               </div>
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-[#C99F17] rounded-full flex items-center justify-center mx-auto">
@@ -108,13 +108,6 @@ const MemorysCube = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">2</div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2">Observation des cubes</h4>
-                  <p>Les joueurs observent les différentes faces du cube pour mémoriser l'emplacement des paires.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">3</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Course en relais</h4>
@@ -125,7 +118,7 @@ const MemorysCube = () => {
                 <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">4</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Victoire d'équipe</h4>
-                  <p>L'équipe qui trouve le plus de paires en un temps donné remporte la partie !</p>
+                  <p>L'équipe qui trouve le plus rapidement toutes les paires remporte la partie</p>
                 </div>
               </div>
             </div>

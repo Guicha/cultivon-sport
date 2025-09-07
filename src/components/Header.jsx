@@ -15,13 +15,13 @@ const Header = () => {
                 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-6">
-                    <Link to="/" className="hover:text-gray-300 font-medium transition-colors">Accueil</Link>
+                    <Link to="/" className="hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors">Accueil</Link>
                     
                     {/* Activities Dropdown */}
                     <div className="relative">
                         <button 
                             onClick={() => setIsActivitiesOpen(!isActivitiesOpen)}
-                            className="hover:text-gray-300 font-medium transition-colors flex items-center"
+                            className="hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors flex items-center"
                         >
                             Activités
                             <svg className={`ml-1 h-4 w-4 transition-transform ${isActivitiesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ const Header = () => {
                                     className="block px-4 py-2 hover:bg-gray-700 hover:rounded-md transition-colors"
                                     onClick={() => setIsActivitiesOpen(false)}
                                 >
-                                    Dodges Rôles
+                                    Dodge Rôles
                                 </Link>
                                 <Link 
                                     to="/revis-sport" 
@@ -62,8 +62,8 @@ const Header = () => {
                         )}
                     </div>
                     
-                    <Link to="/about" className="hover:text-gray-300 font-medium transition-colors">Qui sommes nous ?</Link>
-                    <Link to="/contact" className="hover:text-gray-300 font-medium transition-colors">Nous contacter</Link>
+                    <Link to="/about" className="hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors">Qui sommes nous ?</Link>
+                    <Link to="/contact" className="hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors">Nous contacter</Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -79,22 +79,21 @@ const Header = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <nav className={`md:hidden bg-gray/90 rounded-xl backdrop-blur-sm transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <nav className={`md:hidden bg-gray/90 rounded-xl backdrop-blur-3xl transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="container mx-auto p-4 space-y-4">
-                    <Link to="/" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
-                    <Link to="/services" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Nos Services</Link>
+                    <Link to="/" className="block hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
                     
                     {/* Mobile Activities Section */}
                     <div className="border-t border-gray-600 pt-4">
-                        <p className="text-gray-400 text-sm mb-2">Activités</p>
-                        <Link to="/dodges-roles" className="block pl-4 py-1 hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Dodges Rôles</Link>
-                        <Link to="/revis-sport" className="block pl-4 py-1 hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Révi'sport</Link>
-                        <Link to="/memorys-cube" className="block pl-4 py-1 hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Memory's cube</Link>
-                        <Link to="/big-pen" className="block pl-4 py-1 hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Big Pen</Link>
+                        <h1 className="text-black-400 text-sm mb-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Activités</h1>
+                        <Link to="/dodges-roles" className="block pl-4 py-1 hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Dodge Rôles</Link>
+                        <Link to="/revis-sport" className="block pl-4 py-1 hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Révi'sport</Link>
+                        <Link to="/memorys-cube" className="block pl-4 py-1 hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Memory's cube</Link>
+                        <Link to="/big-pen" className="block pl-4 py-1 hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Big Pen</Link>
                     </div>
                     
-                    <Link to="/about" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Qui sommes nous ?</Link>
-                    <Link to="/contact" className="block hover:text-gray-300 font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>Nous contacter</Link>
+                    <Link to="/about" className="block hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Qui sommes nous ?</Link>
+                    <Link to="/contact" className="block hover:text-gray-300 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] transition-colors" onClick={() => setIsMenuOpen(false)}>Nous contacter</Link>
                 </div>
             </nav>
         </header>
