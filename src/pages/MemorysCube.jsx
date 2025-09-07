@@ -108,14 +108,14 @@ const MemorysCube = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">3</div>
+                <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">2</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Course en relais</h4>
                   <p>Les équipes s'affrontent en relais pour retrouver le plus vite possible les bonnes paires cachées.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">4</div>
+                <div className="w-8 h-8 bg-[#C99F17] rounded-full flex items-center justify-center text-black font-bold">3</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Victoire d'équipe</h4>
                   <p>L'équipe qui trouve le plus rapidement toutes les paires remporte la partie</p>
