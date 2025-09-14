@@ -14,7 +14,9 @@ const HomePage = () => {
                 subtitle="Chez Cultivon'sport, nous créons des activités ludiques et sportives pour tout public. Toutes nos activités son innovantes et allient capacités mentales et capacités physiques. La réflexion au cœur de l'action"
                 image={Fond}
             />
+            
             <ActivitySection />
+
             <OurUniverse />
 
             {/* Avis */}

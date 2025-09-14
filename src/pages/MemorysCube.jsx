@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import MemoryBg from "../assets/images/memory.png";
-import Memory1 from "../assets/images/memory1.jpg";
-import Memory2 from "../assets/images/memory3.jpg";
+import Memory1 from "../assets/images/memory1.png";
+import Memory2 from "../assets/images/memory3.png";
 import Image from "../components/Image";
 
 const MemorysCube = () => {

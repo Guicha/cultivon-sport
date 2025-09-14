@@ -1,5 +1,9 @@
 import Hero from "../components/Hero";
 import BigPenBg from "../assets/images/hero3.png";
+import BigPen1 from "../assets/images/bigpen1.png";
+import BigPen2 from "../assets/images/bigpen2.png";
+import BigPen3 from "../assets/images/bigpen3.png";
+import BigPen4 from "../assets/images/bigpen4.png";
 import Image from "../components/Image";
 
 const BigPen = () => {
@@ -29,15 +33,17 @@ const BigPen = () => {
             </p>
           </div>
 
-          {/* Images placeholder section */}
-          <div className="bg-gray-800/50 rounded-lg p-12 text-center">
-            <h3 className="text-3xl font-bold font-komila-axis text-[#C99F17] mb-6">
-              Découvrez Big Pen en images
-            </h3>
-            <div className="text-6xl mb-6">📸</div>
-            <p className="text-lg text-gray-300">
-              Images à venir - Restez connectés pour voir Big Pen en action !
-            </p>
+          {/* Image gallery */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-[#C99F17] text-center">Le jeu en images</h3>
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                <Image src={BigPen1} alt=" " width={400} height={300} />
+                <Image src={BigPen2} alt=" " width={400} height={300} />
+                <Image src={BigPen3} alt=" " width={400} height={300} />
+                <Image src={BigPen4} alt=" " width={400} height={300} />
+              </div>
+            </div>
           </div>
 
           {/* Key features section */}

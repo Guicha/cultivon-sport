@@ -1,5 +1,6 @@
 /* filepath: d:\Prestation Jeece\cultivon'sport\src\components\Activity_section.jsx */
-import videoCrop from '../assets/images/videocrop.mp4';
+import video1 from '../assets/images/activites_video1.mp4';
+import video2 from '../assets/images/activites_video2.mp4';
 import { useNavigate } from 'react-router-dom';
 
 const ActivitySection = () => {
@@ -16,12 +17,23 @@ const ActivitySection = () => {
       <div className="mt-8 flex flex-col items-center">
         <video 
           className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
-          controls
           autoPlay
           muted
           loop
         >
-          <source src={videoCrop} type="video/mp4" />
+          <source src={video1} type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+
+        <br /><br />
+
+        <video 
+          className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
+          autoPlay
+          muted
+          loop
+        >
+          <source src={video2} type="video/mp4" />
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
         
@@ -31,7 +43,7 @@ const ActivitySection = () => {
           </h3>
           <p className="text-white leading-relaxed max-w-3xl mx-auto mb-6">
             Bougez, réfléchissez, progressez ! Nos activités innovantes mêlent stratégie, action et plaisir. 
-            Venez découvrir Dodge Rôles, Révi'Sport et bien d'autres expériences uniques.
+            Chez Cultivon'Sport, nous imaginons des activités originales et exclusives pour s’amuser autrement, tout en proposant aussi des grands classiques qui plaisent à tous : jeux en bois géants, airball gonflable, matériel de sport… Il y en a pour tous les goûts et tous les âges.
           </p>
           <div className="flex justify-center">
             <button 
